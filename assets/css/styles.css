@@ -1,7 +1,9 @@
 p.red {
 	color: red;
 }
-
+.input {
+	width: 200px;
+}
 .row {
 	margin: 10px;
 }

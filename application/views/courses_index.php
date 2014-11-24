@@ -16,11 +16,11 @@
 <?php	} ?>
 			<div class="row">
 				<div class="col-md-1">Name: </div>
-				<div class="col-md-4"><input type="text" name="name" placeholder="Your name here"></div>
+				<div class="col-md-4"><input class="input" type="text" name="name" placeholder="Course name (15 characters)"></div>
 			</div>
 			<div class="row">
 				<div class="col-md-1">Description: </div>
-				<div class="col-md-4"><textarea name="description" placeholder="Optional description"></textarea></div>
+				<div class="col-md-4"><textarea class="input" name="description" placeholder="Optional description"></textarea></div>
 			</div>
 			<div class="row">
 				<div class="col-md-offset-2">
