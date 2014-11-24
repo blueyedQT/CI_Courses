@@ -8,5 +8,13 @@ class Course extends CI_Model {
 		return $this->db->query($query, $values);
 	}
 
+	public function get_all_courses() {
+		return $this->db->query("SELECT id, name, description, DATE_FORMAT(created_at, '%b %D %Y %l:%i%p') AS date_created FROM courses")->result_array();
+	}
+
+	public function get_course_by_id($course_id) {
+		return $this->db->query("SELECT * FROM courses WHERE id = ?", array($course_id))->row_array();
+	} 
+
 }
 ?>

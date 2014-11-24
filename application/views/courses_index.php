@@ -20,6 +20,14 @@
 			<th>Actions</th>
 		</thead>
 		<tbody>
+<?php 		foreach ($courses as $course) { ?>
+			<tr>
+				<td><?php echo $course['name'] ?></td>
+				<td><?php echo $course['description'] ?></td>
+				<td><?php echo $course['date_created'] ?></td>
+				<td><a href="courses/destroy/<?php echo $course['id'] ?>">Remove</a></td>
+			</tr>
+<?php 		} ?>
 			<tr>
 				<td>How to be a ninja</td>
 				<td>Ninja Schoo</td>
