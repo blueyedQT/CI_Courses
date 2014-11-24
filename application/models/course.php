@@ -9,12 +9,15 @@ class Course extends CI_Model {
 	}
 
 	public function get_all_courses() {
-		return $this->db->query("SELECT id, name, description, DATE_FORMAT(created_at, '%b %D %Y %l:%i%p') AS date_created FROM courses")->result_array();
+		return $this->db->query("SELECT id, name, description, DATE_FORMAT(created_at, '%b %D %Y %l:%i%p') AS date_created FROM courses ORDER BY date_created DESC")->result_array();
 	}
 
 	public function get_course_by_id($course_id) {
 		return $this->db->query("SELECT * FROM courses WHERE id = ?", array($course_id))->row_array();
 	} 
 
+	public function delete_course($id) {
+		return $this->db->query("DELETE FROM courses WHERE id = ?", array($id));
+	}
 }
 ?>
